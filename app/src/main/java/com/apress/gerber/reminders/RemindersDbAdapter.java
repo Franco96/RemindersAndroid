@@ -55,10 +55,10 @@ public class RemindersDbAdapter {
 
     //CREATE
     // note that the id will be created for you automatically
-    public void createReminder(String name, boolean important) {
+    public void createReminder(String name, float important) {
         ContentValues values = new ContentValues();
         values.put(COL_CONTENT, name);
-        values.put(COL_IMPORTANT, important ? 1 : 0);
+        values.put(COL_IMPORTANT, important);
         mDb.insert(TABLE_NAME, null, values);
       }
 
@@ -78,7 +78,7 @@ public class RemindersDbAdapter {
           if (cursor != null)
               cursor.moveToFirst();
 
-            return new Reminder(cursor.getInt(INDEX_ID),cursor.getString(INDEX_CONTENT),cursor.getInt(INDEX_IMPORTANT));
+            return new Reminder(cursor.getInt(INDEX_ID),cursor.getString(INDEX_CONTENT),cursor.getFloat(INDEX_IMPORTANT));
     }
 
 

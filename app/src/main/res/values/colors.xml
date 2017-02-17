@@ -9,5 +9,6 @@
     <color name="orange">#ffff381a</color>
     <color name="light_grey">#bababa</color>
     <color name="black">#000000</color>
-    <color name="blue">#ff1118ff</color>
+    <color name="blue">#1118ff</color>
+    <color name="activated_color">#E8E8E8</color>
 </resources>

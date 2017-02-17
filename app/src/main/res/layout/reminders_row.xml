@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:orientation="vertical">
@@ -8,21 +9,23 @@
 
 
     <LinearLayout
-        android:orientation="horizontal"
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
         <view
             android:layout_width="10dp"
             android:layout_height="match_parent"
             class="android.view.View"
             android:id="@+id/row_tab"
-            android:background="@color/green" />
+            android:background="@color/green"
+            />
 
 
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="365dp"
             android:layout_height="50dp"
             android:text="@string/reminder_text"
             android:id="@+id/row_text"
@@ -34,16 +37,5 @@
             android:maxLines="1"    />
 
     </LinearLayout>
-
-    <view
-        class="android.view.View"
-        android:layout_width="fill_parent"
-        android:layout_height="9dp"
-        android:background="#000"/>
-    <view
-        class="android.view.View"
-        android:layout_width="fill_parent"
-        android:layout_height="8dp"
-        android:background="#333"/>
 
 </LinearLayout>
