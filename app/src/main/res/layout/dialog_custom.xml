@@ -4,21 +4,21 @@
     android:layout_width="300dp"
     android:background="@color/green"
     android:orientation="vertical"
-    android:layout_height="350dp">
+    android:layout_height="300dp">
 
     <TextView
         android:id="@+id/custom_title"
         android:layout_width="fill_parent"
         android:gravity="center_vertical"
         android:padding="10dp"
-        android:text="New Reminder:"
+        android:text="Nueva nota:"
         android:textColor="@color/white"
         android:textSize="24sp"
-        android:layout_height="50dp" />
+        android:layout_height="48dp" />
 
     <EditText
         android:id="@+id/custom_edit_reminder"
-        android:layout_width="397dp"
+        android:layout_width="match_parent"
         android:layout_margin="4dp"
         android:background="@color/light_grey"
         android:gravity="start"
@@ -30,28 +30,36 @@
     <include
         android:layout_width="match_parent"
         layout="@layout/rango_estrellas"
-        android:layout_height="80dp" />
+        android:layout_height="75dp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:layout_height="96dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50">
 
         <Button
             android:id="@+id/custom_button_cancel"
             android:layout_width="0dp"
             android:layout_weight="50"
-            android:text="Cancel"
+            android:text="Cancelar"
             android:textColor="@color/white"
-            android:layout_height="50dp" />
+            android:layout_height="55dp" />
 
         <Button
             android:id="@+id/custom_button_commit"
             android:layout_width="0dp"
             android:layout_weight="50"
-            android:text="Commit"
+            android:text="Aceptar"
             android:textColor="@color/white"
-            android:layout_height="50dp" />
+            android:layout_height="55dp" />
 
+    </LinearLayout>
     </LinearLayout>
 </LinearLayout>

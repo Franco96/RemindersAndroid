@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Reminders</string>
-    <string name="reminder_text">Reminder Text</string>
+    <string name="app_name">Anotaciones</string>
+    <string name="reminder_text">Anotaciones Texto</string>
     <string name="exit">exit</string>
-    <string name="new_reminder">new Reminder</string>
-    <string name="delete">delete</string>
+    <string name="new_reminder">Nueva Anotación</string>
+    <string name="delete">eliminar</string>
+    <string name="EditNota">Editar Nota</string>
 </resources>

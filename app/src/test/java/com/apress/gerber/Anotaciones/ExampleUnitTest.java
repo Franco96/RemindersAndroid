@@ -1,4 +1,4 @@
-package com.apress.gerber.reminders;
+package com.apress.gerber.anotaciones;
 
 import org.junit.Test;
 
