@@ -1,6 +1,5 @@
 package com.apress.gerber.anotaciones;
 
-
 public class Notas {
    //attribute
       private int mId;
@@ -35,8 +34,6 @@ public class Notas {
     {
         mId = id;
     }
-
-
 
 }
 

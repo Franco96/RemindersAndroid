@@ -30,8 +30,7 @@ public class NotasSimpleCursorAdapter extends SimpleCursorAdapter {
     }
 
 
-    //Durante el tiempo de ejecución, ListView invocará repetidamente el método bindView ()
-    //en el adaptador con objetos de vista en pantalla individuales a medida que el usuario se cargue y se desplace por la lista.
+    //Se establecen los elementos de su vista
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         super.bindView(view, context, cursor);

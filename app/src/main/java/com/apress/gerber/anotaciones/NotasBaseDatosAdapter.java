@@ -8,18 +8,16 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import java.sql.Blob;
 
 
 public class NotasBaseDatosAdapter {
 
     //Nombres de la columna de la base de datos
-
     public static final String COL_ID = "_id";
     public static final String COL_CONTENT = "content";
     public static final String COL_IMPORTANT = "important";
-    //Correspondientes indices
 
+    //Correspondientes indices
     public static final int INDEX_ID = 0;
     public static final int INDEX_CONTENT = INDEX_ID + 1;
     public static final int INDEX_IMPORTANT = INDEX_ID + 2;
@@ -43,7 +41,7 @@ public class NotasBaseDatosAdapter {
 
 
 
-    //-----------------METODOS---------------------------------
+    //-----------------METODOS---------------------------------//
 
     //open
     public void open() throws SQLException {
@@ -57,7 +55,6 @@ public class NotasBaseDatosAdapter {
                mDbHelper.close();
     }
 
-
     //CREATE
     public void createReminder(String name, float important) {
         ContentValues values = new ContentValues();
@@ -65,7 +62,6 @@ public class NotasBaseDatosAdapter {
         values.put(COL_IMPORTANT, important);
         mDb.insert(TABLE_NAME, null, values);
       }
-
 
      //Crear notas igual que el metodo anterior esta sobrecargado
      public long createReminder(Notas notas) {

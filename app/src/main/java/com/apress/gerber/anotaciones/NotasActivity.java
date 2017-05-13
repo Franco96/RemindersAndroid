@@ -9,18 +9,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RatingBar;
-import android.widget.TextView;
-import android.widget.Toast;
 import static com.apress.gerber.anotaciones.R.*;
-
 
 public class NotasActivity extends AppCompatActivity {
     //Atributos
@@ -30,6 +22,7 @@ public class NotasActivity extends AppCompatActivity {
     private UseDialog mostrarDialog;
     public Toolbar toolbar;
     public Cursor cursor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,10 +72,12 @@ public class NotasActivity extends AppCompatActivity {
 
         //El cursosAdaoter ahora actualiza la listWiew con los datos de la base de datos
         mListView.setAdapter(cursorAdapter);
+
         //Creamos el objeto que nos ayudara a mostrar los paneles de dialogo
         mostrarDialog = new UseDialog(this,notasBaseDatosAdapter,cursorAdapter);
-
     }
+
+
 
     private void clickEnListWiewGeneral()
     {
@@ -126,7 +121,7 @@ public class NotasActivity extends AppCompatActivity {
                         break;
                     case 1:
                         //Editar nota
-                         mostrarDialog.customDialogCascara(notas);
+                        mostrarDialog.customDialogCascara(notas);
                         break;
                     case 2:
                         //Eliminar nota
@@ -145,12 +140,16 @@ public class NotasActivity extends AppCompatActivity {
         return (int) cursorAdapter.getItemId(nC);
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 //clase utilizada por la actividad principal para mostrar paneles de dialogos dependiedo
 // del servicio de dialogo que el cliente quiera
-public class UseDialog {
+ class UseDialog {
 
     //ATRIBUTOS
 
@@ -25,15 +25,15 @@ public class UseDialog {
       private  TextView textoCantEstrellas;
       private  TextView tituloDialogNota;
       private  EditText editCustom;
-      Button  commitButton;
-      Button  buttonCancel;
-      LinearLayout rootLayout;
+      private Button  commitButton;
+      private Button  buttonCancel;
+      private LinearLayout rootLayout;
 
 
 
     //constructor
 
-    public UseDialog(NotasActivity activity, NotasBaseDatosAdapter baseDatosAdapter, NotasSimpleCursorAdapter cursorAdapter)
+    UseDialog(NotasActivity activity, NotasBaseDatosAdapter baseDatosAdapter, NotasSimpleCursorAdapter cursorAdapter)
     {
         a = activity;
         this.notasBaseDatosAdapter = baseDatosAdapter;
@@ -44,7 +44,7 @@ public class UseDialog {
 
     }
 
-    public void mostrarRankingEstrellas(final Notas notas) {
+     void mostrarRankingEstrellas(final Notas notas) {
 
         //Ranking que aparece en el dialogo
         dialog.setContentView(R.layout.rango_estrellas);
@@ -56,7 +56,9 @@ public class UseDialog {
         dialog.show();
     }
 
-    public void customDialogCascara(Notas notas) {
+
+
+    void customDialogCascara(Notas notas) {
 
         //..........INICIALIZAMOS LAYOUT DE CUSTOM_DIALOG.....................//
         //custom dialog
